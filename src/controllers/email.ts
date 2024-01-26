@@ -36,6 +36,8 @@ class Email {
 
 		// check if email was sent successfully
 		if (resp.status > 299 || resp.status < 200) {
+			const errorBody = await resp.text(); // or resp.json() if the response is in JSON format
+			console.error(`Error sending email: ${resp.status} ${resp.statusText}`, errorBody);
 			throw new Error(`Error sending email: ${resp.status} ${resp.statusText}`);
 		}
 	}
