@@ -17,7 +17,7 @@ const EmailSchemaMiddleware = async (request: EmailRequest) => {
 	switch (clientName) {
 		case 'rochesterhandyman':
 			fromEmail = 'contact@thehandymanofrochester.com';
-			toEmail = 'ed@hasahub.com';
+			toEmail = 'thorllc2023@gmail.com';
 			break;
 		// Add more cases for different clients
 		// case 'anotherClient':
